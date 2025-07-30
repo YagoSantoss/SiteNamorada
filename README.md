@@ -20,7 +20,7 @@ Este é um projeto de página web dedicado a uma pessoa especial. Ele apresenta 
 📦 raiz/
 ├── index.html         # Página principal
 ├── style.css          # Estilos personalizados
-├── video.mp4          # Vídeo de fundo
+├── video.mp4 ──  video2.mp4        # Vídeos de fundo
 └── fotos/             # Pasta com imagens utilizadas na galeria
 ```
 
