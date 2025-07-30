@@ -2,6 +2,7 @@
 Link: https://chipper-babka-d0d408.netlify.app/
 
 Login: amaislinda
+
 Senha: pequenadoyago123
 
 Este é um projeto de página web dedicado a uma pessoa especial. Ele apresenta uma coleção de fotos, um vídeo de fundo e uma mensagem carinhosa com uma pequena surpresa interativa. Foi feito com carinho, criatividade e muito amor. 💖
