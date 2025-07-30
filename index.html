@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Login do Aniversário 🎉</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Vídeo de fundo -->
+  <video autoplay muted loop id="video-fundo">
+    <source src="video2.mp4" type="video/mp4">
+    Seu navegador não suporta vídeo em HTML5.
+  </video>
+
+  <!-- Conteúdo principal -->
+  <div class="container">
+    <h2>🎀 Feliz Aniversário, meu amor! 🎀</h2>
+    <div class="login-box">
+      <p>Entre com seu usuário e senha surpresa 💌</p>
+      <input type="text" id="usuario" placeholder="Usuário">
+      <input type="password" id="senha" placeholder="Senha">
+      <button onclick="verificarLogin()">Entrar</button>
+      <p id="mensagem" class="mensagem-erro"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

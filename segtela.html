@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para o amor da minha vida 💙</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-gradient-to-br from-blue-600 to-purple-700 text-white min-h-screen flex flex-col">
+
+  <video autoplay muted loop id="video-bg">
+    <source src="video.mp4" type="video/mp4" />
+    Seu navegador não suporta vídeo em HTML5.
+  </video>
+
+  <header class="text-center py-6">
+    <h1 class="text-4xl font-bold">Para o amor da minha vida 💙</h1>
+    <p class="text-lg text-white-200 mt-2">Cada momento ao seu lado é inesquecível</p>
+    <p class="text-lg text-white-200 mt-2">Clique nas fotos!!!</p>
+  </header>
+
+  <main class="p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+    <div class="card-foto" onclick="mostrarMensagem(this, 'Você é minha gatinha 🤍')">
+      <img src="fotos/foto1.jpg" alt="Foto 1" class="w-full h-64 object-cover" />
+    </div>
+    <div class="card-foto" onclick="mostrarMensagem(this, 'Cada sorriso seu vale o mundo! 🌍')">
+      <img src="fotos/foto2.jpg" alt="Foto 2" class="w-full h-64 object-cover" />
+    </div>
+    <div class="card-foto" onclick="mostrarMensagem(this, 'Te amo mais a cada dia 💖')">
+      <img src="fotos/foto14.jpg" alt="Foto 3" class="w-full h-64 object-cover" />
+    </div>
+    <div class="card-foto" onclick="mostrarMensagem(this, 'Você transforma meus dias! ✨')">
+      <img src="fotos/foto4.jpg" alt="Foto 4" class="w-full h-64 object-cover" />
+    </div>
+    <div class="card-foto" onclick="mostrarMensagem(this, 'Quero estar com você pra sempre 💍')">
+      <img src="fotos/foto5.jpg" alt="Foto 5" class="w-full h-64 object-cover" />
+    </div>
+    <div class="card-foto" onclick="mostrarMensagem(this, 'Meu coração é seu ❤️')">
+      <img src="fotos/foto6.jpg" alt="Foto 6" class="w-full h-64 object-cover" />
+    </div>
+    <div class="card-foto" onclick="mostrarMensagem(this, 'Você é tudo que pedi a Deus 🙏')">
+      <img src="fotos/foto7.jpg" alt="Foto 7" class="w-full h-64 object-cover" />
+    </div>
+    <div class="card-foto" onclick="mostrarMensagem(this, 'Feliz aniversário, meu amor 🎉')">
+      <img src="fotos/foto8.jpg" alt="Foto 8" class="w-full h-64 object-cover" />
+    </div>
+  </main>
+
+  <div class="flex flex-col items-center mt-10">
+    <button id="surpriseBtn" class="bg-gradient-to-r from-pink-500 to-purple-500 hover:scale-105 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300">
+      Clique para uma surpresa 💖
+    </button>
+
+    <div class="mt-6 animate-bounce text-5xl">💖</div>
+    <p class="text-white mt-2 italic">Você me faz feliz de um jeito que ninguém mais faz 💌</p>
+
+    <div id="message" class="mt-8 hidden text-center text-xl max-w-md bg-white text-purple-800 p-6 rounded-xl shadow-lg">
+      Oi, minha gatinha! ❤️
+
+      Se você está lendo isso, é porque tudo deu certo — mais uma vez, Deus tem guiado nossos passos e escrito nossa história com tanto amor. 🙏
+      
+      Antes de qualquer coisa, eu quero agradecer a Ele por me dar o privilégio de te ter como minha namorada. E mais ainda... por me deixar sonhar com o dia em que serei seu marido. Que honra seria poder viver todos os dias ao seu lado. 💍
+      
+      Hoje é um dia muito especial pra gente. Não é só o nosso dia de namoro, é o mês mais lindo do ano: o mês do seu aniversário. Abril ficou mais bonito desde que você nasceu — e se tornou perfeito quando você entrou na minha vida. 🌸
+      
+      <strong>Amor, eu te amo tanto!</strong> Tem horas que nem sei como colocar em palavras tudo o que sinto por você… Mas tento demonstrar isso em cada detalhe, em cada carinho, em cada atitude. Espero que, mesmo nos silêncios, você sinta o quanto é amada.
+      
+      Quis te dar esse presente simples, mas cheio de significado. Pode não ser muito perto da mulher maravilhosa que você é, mas foi feito com todo o meu coração. ❤️
+      
+      Você é meu presente de Deus, minha melhor amiga, minha parceira, minha futura esposa. Obrigado por ser exatamente quem você é.
+      
+      Te amo mais do que consigo dizer. Feliz nosso dia, feliz sua vida — e que venham muitos e muitos anos juntinhos, vivendo tudo o que Deus preparou pra gente. ✨
+      
+      <em>Com todo o meu amor,
+      Yago</em>
+      
+    </div>
+  </div>
+
+  <script>
+    const btn = document.getElementById("surpriseBtn");
+    const msg = document.getElementById("message");
+
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.textContent = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.bottom = "0";
+      heart.style.animationDuration = (Math.random() * 6 + 8) + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }
+
+    function startHearts() {
+      setInterval(createHeart, 400);
+    }
+
+    btn.addEventListener("click", () => {
+      msg.classList.remove("hidden");
+      startHearts();
+    });
+
+    function mostrarMensagem(elemento, mensagem) {
+  // Remove tudo dentro do card
+  elemento.innerHTML = "";
+
+  // Cria o parágrafo com a mensagem
+  const texto = document.createElement("p");
+  texto.textContent = mensagem;
+  texto.classList.add("mensagem-texto");
+  elemento.appendChild(texto);
+}
+  </script>
+</body>
+</html>
